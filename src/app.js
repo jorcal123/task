@@ -26,9 +26,6 @@ app.use('/api/tasks', taskRoutes);
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 
-app.get('/', (req, res) => {
-  res.redirect('/api-docs');
-});
 
 // Manejador de errores global
 app.use(errorHandler);
