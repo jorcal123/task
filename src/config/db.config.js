@@ -3,8 +3,12 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
   try {
     const mongouri = process.env.MONGODB_URI;
+    console.log('Iniciando conexión a MongoDB...');
     console.log('URI de conexión:', mongouri); // Para debuggear
-    
+    console.log('Variables de entorno disponibles:', Object.keys(process.env));
+    console.log('MONGODB_URI:', mongouri ? 'Definida' : 'No definida');
+
+
     if (!mongouri) {
       throw new Error('La URL de la base de datos no está definida');
     }
