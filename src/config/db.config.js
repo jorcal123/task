@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    const mongouri = process.env.MONGODB_URI;
+    const mongouri = "mongodb+srv://databasejc:erRooPddZZad1tPM@cluster0.h3pdr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
     console.log('Iniciando conexión a MongoDB...');
     console.log('URI de conexión:', mongouri); // Para debuggear
     console.log('Variables de entorno disponibles:', Object.keys(process.env));
